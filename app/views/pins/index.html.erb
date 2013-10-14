@@ -1,17 +1,6 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
   <tbody>
       <div id="pins" class="transitions-enabled">
         <% @pins.each do |pin| %>
@@ -38,8 +27,3 @@
     </div>
   </tbody>
 </table>
-
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path %>
-<% end %>
